@@ -1,16 +1,19 @@
 // Configurações principais do site — edite aqui quando tiver as informações finais.
 const SITE = {
   airbnbUrl: "https://www.airbnb.com.br/rooms/1697423673867581459?unique_share_id=639cff9a-bcb5-45d3-bdaa-59b544188f0b&viralityEntryPoint=1&s=76",
+
+  whatsappUrl: "https://wa.me/5512997108123?text=Olá! Tenho interesse em me hospedar no Chalé Gabi. Poderia me passar mais informações?",
+
   coordinates: {
     lat: -22.66530961966471,
     lng: -45.66862383295059
   },
   property: {
-    guests: "X hóspedes",
-    bedrooms: "X quartos",
-    beds: "X camas",
-    bathrooms: "X banheiros",
-    price: "A partir de R$ XXX por noite"
+    guests: "Até 4 hóspedes",
+    bedrooms: "1 quarto de casal",
+    beds: "1 cama de casal e 1 sofá-cama",
+    bathrooms: "1 banheiro",
+    price: "Diárias a partir de R$ 560"
   }
 };
 
@@ -47,9 +50,13 @@ menu.querySelectorAll("a[href^='#']").forEach((link) => {
   });
 });
 
-// Aplica links do Airbnb e dados editáveis.
+// Aplica links do Airbnb, WhatsApp e dados editáveis.
 document.querySelectorAll("[data-airbnb-link]").forEach((link) => {
   link.href = SITE.airbnbUrl;
+});
+
+document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
+  link.href = SITE.whatsappUrl;
 });
 
 document.querySelectorAll("[data-property]").forEach((el) => {
@@ -57,6 +64,7 @@ document.querySelectorAll("[data-property]").forEach((el) => {
   if (SITE.property[key]) el.textContent = SITE.property[key];
 });
 
+/*
 const mapUrl = `https://www.google.com/maps?q=${SITE.coordinates.lat},${SITE.coordinates.lng}`;
 const mapLink = document.querySelector("[data-map-link]");
 if (mapLink) mapLink.href = mapUrl;
@@ -70,6 +78,54 @@ const mapEmbed = document.querySelector("[data-map-embed]");
 if (mapEmbed) {
   const { lat, lng } = SITE.coordinates;
   mapEmbed.src = `https://www.openstreetmap.org/export/embed.html?bbox=${lng - 0.04},${lat - 0.03},${lng + 0.04},${lat + 0.03}&layer=mapnik&marker=${lat},${lng}`;
+}*/
+
+// Localização: Google Maps, Waze, iframe e copiar endereço.
+const addressText = "Rod. Pref. Benedicto Gomes de Souza, km 7.4, São Bento do Sapucaí - SP, 12490-000";
+const { lat, lng } = SITE.coordinates;
+
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
+
+const mapLink = document.querySelector("[data-map-link]");
+if (mapLink) {
+  mapLink.href = googleMapsUrl;
+}
+
+const wazeLink = document.querySelector("[data-waze-link]");
+if (wazeLink) {
+  wazeLink.href = wazeUrl;
+}
+
+const coordinatesText = document.querySelector("[data-coordinates]");
+if (coordinatesText) {
+  coordinatesText.textContent = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+}
+
+const mapEmbed = document.querySelector("[data-map-embed]");
+if (mapEmbed) {
+  mapEmbed.src = `https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
+}
+
+const copyAddressButton = document.querySelector("[data-copy-address]");
+if (copyAddressButton) {
+  copyAddressButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(addressText);
+
+      copyAddressButton.textContent = "Endereço copiado!";
+
+      setTimeout(() => {
+        copyAddressButton.textContent = "Copiar endereço";
+      }, 2000);
+    } catch (error) {
+      copyAddressButton.textContent = "Não foi possível copiar";
+
+      setTimeout(() => {
+        copyAddressButton.textContent = "Copiar endereço";
+      }, 2000);
+    }
+  });
 }
 
 // Lightbox da galeria.

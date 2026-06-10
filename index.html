@@ -28,8 +28,14 @@
       "@type":"LodgingBusiness",
       "name":"Chalé Gabi - Paiol Grande",
       "description":"Chalé aconchegante em São Bento do Sapucaí - SP, região do Paiol Grande.",
-      "address":{"@type":"PostalAddress","addressLocality":"São Bento do Sapucaí","addressRegion":"SP","addressCountry":"BR"},
-      "geo":{"@type":"GeoCoordinates","latitude":-22.66530961966471,"longitude":-45.66862383295059},
+"address":{
+  "@type":"PostalAddress",
+  "streetAddress":"Rod. Pref. Benedicto Gomes de Souza, km 7.4",
+  "addressLocality":"São Bento do Sapucaí",
+  "addressRegion":"SP",
+  "postalCode":"12490-000",
+  "addressCountry":"BR"
+},      "geo":{"@type":"GeoCoordinates","latitude":-22.66530961966471,"longitude":-45.66862383295059},
       "image":"assets/hero-chalet.jpg",
       "url":"https://www.airbnb.com.br/rooms/1697423673867581459?unique_share_id=639cff9a-bcb5-45d3-bdaa-59b544188f0b&viralityEntryPoint=1&s=76"
     }
@@ -46,7 +52,7 @@
         <a href="#chale">O Chalé</a>
         <a href="#fotos">Fotos</a>
         <a href="#localizacao">Localização</a>
-        <a href="#reserva">Reserva</a>
+        <a href="#reserva">Reservas</a>
         <a class="button button-dark nav-cta" data-airbnb-link target="_blank" rel="noopener noreferrer">Reservar</a>
       </div>
     </nav>
@@ -62,11 +68,21 @@
         <h1>Chalé Gabi <em>Paiol Grande</em></h1>
         <p class="hero-subtitle">Um refúgio aconchegante em meio à natureza de São Bento do Sapucaí.</p>
         <p class="hero-text">Viva dias tranquilos cercado pela natureza, com ar puro, conforto e o charme da serra.</p>
+
         <div class="button-row">
-          <a class="button button-light" data-airbnb-link target="_blank" rel="noopener noreferrer">Reservar pelo Airbnb
-            ↗</a>
-          <a class="button button-outline" href="#fotos">Ver fotos</a>
+          <a class="button button-light" data-airbnb-link target="_blank" rel="noopener noreferrer">
+            Reservar pelo Airbnb ↗
+          </a>
+
+          <a class="button button-whatsapp" data-whatsapp-link target="_blank" rel="noopener noreferrer">
+            Falar pelo WhatsApp ↗
+          </a>
+
+          <a class="button button-outline" href="#fotos">
+            Ver fotos
+          </a>
         </div>
+
       </div>
     </section>
 
@@ -76,60 +92,97 @@
           <span class="eyebrow">O Chalé</span>
           <h2>Conforto, natureza e tranquilidade em um só lugar</h2>
         </div>
+
         <div>
-          <p class="lead">Localizado na charmosa região do Paiol Grande, em São Bento do Sapucaí, o Chalé Gabi é
-            perfeito para quem busca tranquilidade, contato com a natureza e uma experiência acolhedora no interior.</p>
-          <p class="lead">É uma ótima opção para casais, famílias pequenas ou viajantes que desejam desacelerar e
-            aproveitar dias especiais em um ambiente calmo e reservado.</p>
+          <p class="lead">
+            Localizado na região do Paiol Grande, em São Bento do Sapucaí, o Chalé Gabi é ideal para
+            quem busca descanso, natureza e uma estadia aconchegante na Serra da Mantiqueira.
+          </p>
+
+          <p class="lead">
+            O chalé acomoda até 4 hóspedes, com um quarto de casal na parte superior e sala integrada
+            à cozinha com sofá-cama.
+          </p>
+
           <dl class="summary-cards">
             <div>
               <dt>Hóspedes</dt>
-              <dd data-property="guests">X hóspedes</dd>
+              <dd data-property="guests">Até 4 hóspedes</dd>
             </div>
+
             <div>
-              <dt>Quartos</dt>
-              <dd data-property="bedrooms">X quartos</dd>
+              <dt>Quarto</dt>
+              <dd data-property="bedrooms">1 quarto de casal</dd>
             </div>
+
             <div>
               <dt>Camas</dt>
-              <dd data-property="beds">X camas</dd>
+              <dd data-property="beds">1 cama de casal e 1 sofá-cama</dd>
             </div>
+
             <div>
-              <dt>Banheiros</dt>
-              <dd data-property="bathrooms">X banheiros</dd>
+              <dt>Banheiro</dt>
+              <dd data-property="bathrooms">1 banheiro amplo</dd>
             </div>
           </dl>
-          <p class="muted" data-property="price">A partir de R$ XXX por noite</p>
+
+          <p class="muted" data-property="price">Diárias a partir de R$ 560</p>
         </div>
       </div>
     </section>
 
+
     <section class="section section-tight">
       <div class="container card-grid highlights">
-        <article class="card"><span>🌲</span>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:trees.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
           <h3>Cercado pela natureza</h3>
-          <p>Mata e montanhas em todas as direções.</p>
+          <p>Mata, montanhas e ar puro da Serra da Mantiqueira.</p>
         </article>
-        <article class="card"><span>🏡</span>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:house.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
           <h3>Ambiente aconchegante</h3>
-          <p>Pensado para acolher e relaxar.</p>
+          <p>Um espaço pensado para descansar e se sentir em casa.</p>
         </article>
-        <article class="card"><span>📍</span>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:map-pin.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
           <h3>Localização tranquila</h3>
-          <p>Região do Paiol Grande, longe do agito.</p>
+          <p>Na região do Paiol Grande, com clima reservado e silencioso.</p>
         </article>
-        <article class="card"><span>🤎</span>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:heart.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
           <h3>Ideal para descanso</h3>
-          <p>Perfeito para casais e famílias pequenas.</p>
+          <p>Perfeito para casais, famílias pequenas e dias de pausa.</p>
         </article>
-        <article class="card"><span>🧭</span>
-          <h3>Experiências ao ar livre</h3>
-          <p>Trilhas, mirantes e passeios próximos.</p>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:compass.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
+          <h3>Passeios próximos</h3>
+          <p>Trilhas, mirantes, restaurantes e experiências ao ar livre.</p>
         </article>
-        <article class="card"><span>📅</span>
-          <h3>Reserva fácil pelo Airbnb</h3>
-          <p>Disponibilidade e valores sempre atualizados.</p>
+
+        <article class="card">
+          <span class="card-icon">
+            <img src="https://api.iconify.design/lucide:calendar-check.svg?color=%236f7f5f&width=24&height=24" alt="">
+          </span>
+          <h3>Reserva fácil</h3>
+          <p>Consulte disponibilidade e valores diretamente pelo Airbnb.</p>
         </article>
+
       </div>
     </section>
 
@@ -164,39 +217,113 @@
         <div class="narrow">
           <span class="eyebrow">Experiência</span>
           <h2>Um lugar para desacelerar</h2>
-          <p class="lead">Imagine acordar com o som da natureza, respirar o ar puro da serra e aproveitar dias
-            tranquilos em um chalé pensado para acolher. O Chalé Gabi oferece uma atmosfera simples, charmosa e
-            confortável para quem quer fugir da rotina e viver momentos especiais no interior.</p>
+          <p class="lead">
+            Imagine acordar com o som da natureza, respirar o ar puro da serra e aproveitar dias
+            tranquilos em um chalé pensado para acolher. O Chalé Gabi oferece uma atmosfera simples,
+            charmosa e confortável para quem quer fugir da rotina e viver momentos especiais no interior.
+          </p>
         </div>
+
         <div class="experience-grid">
-          <div class="mini-card">☀️<p>Relaxar e recarregar as energias</p>
+          <div class="mini-card">
+            <span class="mini-card-icon">
+              <img src="https://api.iconify.design/lucide:sun.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+            <p>Relaxar e recarregar as energias</p>
           </div>
-          <div class="mini-card">🌲<p>Conectar-se com a natureza</p>
+
+          <div class="mini-card">
+            <span class="mini-card-icon">
+              <img src="https://api.iconify.design/lucide:trees.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+            <p>Conectar-se com a natureza</p>
           </div>
-          <div class="mini-card">⛰️<p>Aproveitar São Bento do Sapucaí</p>
+
+          <div class="mini-card">
+            <span class="mini-card-icon">
+              <img src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+            <p>Aproveitar São Bento do Sapucaí</p>
           </div>
-          <div class="mini-card">📅<p>Reservar com praticidade pelo Airbnb</p>
+
+          <div class="mini-card">
+            <span class="mini-card-icon">
+              <img src="https://api.iconify.design/lucide:calendar-check.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+            <p>Reservar com praticidade pelo Airbnb</p>
           </div>
         </div>
       </div>
     </section>
-
     <section class="section section-alt">
       <div class="container">
         <span class="eyebrow">Comodidades</span>
         <h2>Comodidades</h2>
+
         <ul class="amenities">
-          <li><span>📶</span>Wi-Fi</li>
-          <li><span>👨‍🍳</span>Cozinha equipada</li>
-          <li><span>🚗</span>Estacionamento</li>
-          <li><span>🛏️</span>Roupa de cama</li>
-          <li><span>⛰️</span>Vista para a natureza</li>
-          <li><span>🌲</span>Área externa</li>
-          <li><span>🐾</span>Aceita pets (a confirmar)</li>
-          <li><span>🔥</span>Lareira (a confirmar)</li>
-          <li><span>🍽️</span>Churrasqueira (a confirmar)</li>
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:chef-hat.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Cozinha com cooktop
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:refrigerator.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Frigobar
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:tv.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            TV de 32”
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:snowflake.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Ar-condicionado
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:heater.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Aquecedor a óleo
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:droplets.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Banheiro com aquecimento a gás
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:sofa.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Sofá-cama
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Vista para a natureza
+          </li>
+
+          <li>
+            <span>
+              <img src="https://api.iconify.design/lucide:paw-print.svg?color=%236f7f5f&width=22&height=22" alt="">
+            </span>
+            Aceita pets de pequeno porte, máximo 2
+          </li>
         </ul>
-        <p class="muted italic">As comodidades podem ser atualizadas conforme a versão final do anúncio no Airbnb.</p>
       </div>
     </section>
 
@@ -205,51 +332,212 @@
         <div>
           <span class="eyebrow">Onde fica</span>
           <h2>Localização</h2>
-          <p class="lead">O chalé está localizado em São Bento do Sapucaí - SP, na região do Paiol Grande, uma área
-            tranquila e cercada pela natureza.</p>
+
+          <p class="lead">
+            O Chalé Gabi está localizado na região do Paiol Grande, em São Bento do Sapucaí - SP,
+            uma área tranquila, cercada pela natureza e próxima aos principais passeios da região.
+          </p>
+
           <dl class="details-list">
             <div>
-              <dt>Cidade</dt>
-              <dd>São Bento do Sapucaí - SP</dd>
+              <dt>Endereço</dt>
+              <dd data-address>
+                Rod. Pref. Benedicto Gomes de Souza, km 7.4<br>
+                São Bento do Sapucaí - SP, 12490-000
+              </dd>
             </div>
+
             <div>
-              <dt>Região</dt>
-              <dd>Paiol Grande</dd>
+              <dt>Referência</dt>
+              <dd>
+                Após o Acampamento Paiol Grande, siga pela Rod. Pref. Benedicto Gomes de Souza até o km 7.4.
+              </dd>
             </div>
+
             <div>
               <dt>Coordenadas</dt>
               <dd class="mono" data-coordinates>-22.665310, -45.668624</dd>
             </div>
           </dl>
-          <a class="button button-dark" data-map-link target="_blank" rel="noopener noreferrer">📍 Ver no mapa</a>
+
+          <div class="location-actions">
+            <a class="button button-dark location-button-main" data-map-link target="_blank" rel="noopener noreferrer">
+              Ver no Google Maps ↗
+            </a>
+
+            <a class="button location-button-secondary" data-waze-link target="_blank" rel="noopener noreferrer">
+              Abrir no Waze ↗
+            </a>
+
+            <button class="button location-button-secondary" type="button" data-copy-address>
+              Copiar endereço
+            </button>
+          </div>
         </div>
+
         <div class="map-frame">
-          <iframe title="Mapa aproximado do Chalé Gabi" data-map-embed loading="lazy"></iframe>
+          <iframe title="Mapa aproximado do Chalé Gabi" data-map-embed loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
         </div>
       </div>
     </section>
 
-    <section class="section section-alt">
+
+
+    <section class="section section-alt" id="explore">
       <div class="container">
-        <div class="narrow">
-          <span class="eyebrow">Destino</span>
-          <h2>Explore São Bento do Sapucaí</h2>
-          <p class="lead">São Bento do Sapucaí é conhecida por suas paisagens naturais, clima de montanha, gastronomia
-            acolhedora e experiências ao ar livre. É um destino ideal para quem busca descanso, trilhas, mirantes e
-            momentos de conexão com a natureza.</p>
+        <div class="section-heading split-heading">
+          <div>
+            <span class="eyebrow">Destino</span>
+            <h2>Explore São Bento do Sapucaí</h2>
+          </div>
+
+          <p>
+            Entre montanhas, trilhas, cafés charmosos e boa gastronomia, São Bento do Sapucaí oferece
+            experiências perfeitas para quem quer descansar, passear e aproveitar a Serra da Mantiqueira.
+          </p>
         </div>
-        <div class="experience-grid">
-          <div class="mini-card">⛰️<p>Natureza e montanhas</p>
-          </div>
-          <div class="mini-card">🍽️<p>Gastronomia local</p>
-          </div>
-          <div class="mini-card">🧭<p>Trilhas e passeios ao ar livre</p>
-          </div>
-          <div class="mini-card">🏡<p>Charme do interior</p>
-          </div>
+
+        <div class="explore-grid">
+
+          <article class="explore-card">
+            <span class="explore-icon">
+              <img src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+
+            <span class="explore-category">Passeios</span>
+            <h3>Natureza e mirantes</h3>
+
+            <ul>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pedra%20do%20Ba%C3%BA%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Pedra do Baú</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bauzinho%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Bauzinho</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Pedra%20Ana%20Chata%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Pedra Ana Chata</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Mirante%20Paiol%20Grande%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Mirantes do Paiol Grande</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Capelinha%20de%20Mosaico%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Capelinha de Mosaico</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="explore-card">
+            <span class="explore-icon">
+              <img src="https://api.iconify.design/lucide:coffee.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+
+            <span class="explore-category">Cafés</span>
+            <h3>Cafés e brunch</h3>
+
+            <ul>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Doce%20Caf%C3%A9%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Doce Café</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Jardim%20Caf%C3%A9%20e%20Brunch%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Jardim Café & Brunch</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=O%20Bento%20Caf%C3%A9%20e%20Arte%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">O Bento Café e Arte</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Sabor%20da%20Serra%20Caf%C3%A9%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Sabor da Serra Café</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Dona%20Mariquinha%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Dona Mariquinha</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="explore-card">
+            <span class="explore-icon">
+              <img src="https://api.iconify.design/lucide:utensils.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+
+            <span class="explore-category">Gastronomia</span>
+            <h3>Onde comer</h3>
+
+            <ul>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Pedra%20do%20Ba%C3%BA%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Restaurante Pedra do Baú</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Sabor%20com%20Arte%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Restaurante Sabor com Arte</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=L%C3%A1%20na%20Ro%C3%A7a%20Restaurante%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Lá na Roça Restaurante</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Do%20Compadre%20Restaurante%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Do Compadre Restaurante</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Restaurante%20Entre%20Vilas%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Restaurante Entre Vilas</a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="explore-card">
+            <span class="explore-icon">
+              <img src="https://api.iconify.design/lucide:glass-water.svg?color=%236f7f5f&width=24&height=24" alt="">
+            </span>
+
+            <span class="explore-category">Fim de tarde</span>
+            <h3>Para curtir sem pressa</h3>
+
+            <ul>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bauzera%20Cervejas%20Especiais%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Bauzera Cervejas Especiais</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=D%C3%B9%20Ba%C3%BA%20Cervejaria%20Artesanal%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Dù Baú Cervejaria Artesanal</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Tiao%20Bar%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Tião Bar</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=Centro%20de%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Centro de São Bento do Sapucaí</a>
+              </li>
+              <li>
+                <a href="https://www.google.com/maps/search/?api=1&query=lojinhas%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
+                  target="_blank" rel="noopener noreferrer">Comércios locais e lojinhas</a>
+              </li>
+            </ul>
+          </article>
+
         </div>
+
+        <p class="muted italic explore-note">
+          Dica: horários de funcionamento, valores e necessidade de reserva podem variar. Consulte antes de sair.
+        </p>
       </div>
     </section>
+
+
 
     <section id="reserva" class="cta-section">
       <img src="assets/cta-mountains.jpg" alt="Montanhas e neblina ao amanhecer em São Bento do Sapucaí" loading="lazy">
@@ -267,12 +555,21 @@
     <div class="container footer-grid">
       <div>
         <p class="footer-title">Chalé Gabi - Paiol Grande</p>
-        <p>São Bento do Sapucaí - SP</p>
+        <p>
+          Rod. Pref. Benedicto Gomes de Souza, km 7.4<br>
+          São Bento do Sapucaí - SP, 12490-000
+        </p>
       </div>
-      <p>Site de apresentação do chalé. Reservas realizadas pela plataforma Airbnb.</p>
-      <div class="footer-action">
-        <a class="button button-footer" data-airbnb-link target="_blank" rel="noopener noreferrer">Reservar pelo Airbnb
-          ↗</a>
+
+
+      <div class="footer-buttons">
+        <a class="button button-footer" data-airbnb-link target="_blank" rel="noopener noreferrer">
+          Airbnb ↗
+        </a>
+
+        <a class="button button-footer" data-whatsapp-link target="_blank" rel="noopener noreferrer">
+          WhatsApp ↗
+        </a>
       </div>
     </div>
     <div class="copyright">© 2026 Chalé Gabi - Paiol Grande. Todos os direitos reservados.</div>

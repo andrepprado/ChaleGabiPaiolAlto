@@ -22,9 +22,72 @@ const galleryItems = [
   { src: "assets/gallery-view.jpg", alt: "Vista das montanhas a partir do chalé", caption: "Vista do chalé" },
   { src: "assets/gallery-interior.jpg", alt: "Sala interna aconchegante com madeira", caption: "Ambiente interno" },
   { src: "assets/gallery-nature.jpg", alt: "Mata atlântica ao redor do chalé", caption: "Natureza ao redor" },
-  { src: "assets/gallery-rest.jpg", alt: "Rede no deque com vista para a serra", caption: "Espaço para descanso" },
+  { src: "assets/gallery-rest.jpg", alt: "Rede no deque com vista para a serra", caption: "Espaço superior" },
   { src: "assets/gallery-town.jpg", alt: "Rua charmosa de São Bento do Sapucaí", caption: "Experiência no interior" }
 ];
+
+
+const allPhotoItems = [
+  "WhatsApp Image 2026-06-10 at 10.50.13.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.14.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.14 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.15.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.18.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.18 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.19.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.19 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.21.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.26.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.28.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.28 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.29 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.29 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.32.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.32 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.35.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.35 (1).jpeg"
+].map((fileName, index) => ({
+  src: `assets/carousel/${fileName}`,
+  alt: `Foto ${index + 1} do Chalé Gabi`,
+  caption: `Foto ${index + 1}`
+}));
+
 
 const header = document.querySelector("[data-header]");
 const menuButton = document.querySelector("[data-menu-button]");
@@ -127,7 +190,7 @@ if (copyAddressButton) {
     }
   });
 }
-
+/*
 // Lightbox da galeria.
 let activeIndex = 0;
 const lightbox = document.querySelector("[data-lightbox]");
@@ -176,6 +239,118 @@ lightbox.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowRight") changeImage(1);
+  if (event.key === "ArrowLeft") changeImage(-1);
+});
+*/
+
+// Lightbox da galeria e do carrossel.
+let activeIndex = 0;
+let activeGallery = galleryItems;
+
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+
+function openLightboxFromList(items, index) {
+  activeGallery = items;
+  activeIndex = index;
+
+  const item = activeGallery[activeIndex];
+
+  lightboxImage.src = item.src;
+  lightboxImage.alt = item.alt;
+  lightboxCaption.textContent = item.caption || "";
+
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function openLightbox(index) {
+  openLightboxFromList(galleryItems, index);
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function changeImage(direction) {
+  activeIndex = (activeIndex + direction + activeGallery.length) % activeGallery.length;
+  openLightboxFromList(activeGallery, activeIndex);
+}
+
+// Galeria principal.
+document.querySelectorAll("[data-gallery] [data-index]").forEach((button) => {
+  button.addEventListener("click", () => openLightbox(Number(button.dataset.index)));
+});
+
+// Carrossel com todas as fotos.
+const photoCarousel = document.querySelector("[data-photo-carousel]");
+const carouselPrev = document.querySelector("[data-carousel-prev]");
+const carouselNext = document.querySelector("[data-carousel-next]");
+
+if (photoCarousel) {
+  allPhotoItems.forEach((item, index) => {
+    const button = document.createElement("button");
+
+    button.className = "photo-carousel-item";
+    button.type = "button";
+    button.setAttribute("aria-label", `Abrir foto ${index + 1}`);
+
+    button.innerHTML = `
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+    `;
+
+    button.addEventListener("click", () => {
+      openLightboxFromList(allPhotoItems, index);
+    });
+
+    photoCarousel.appendChild(button);
+  });
+}
+
+if (carouselPrev && photoCarousel) {
+  carouselPrev.addEventListener("click", () => {
+    photoCarousel.scrollBy({
+      left: -420,
+      behavior: "smooth"
+    });
+  });
+}
+
+if (carouselNext && photoCarousel) {
+  carouselNext.addEventListener("click", () => {
+    photoCarousel.scrollBy({
+      left: 420,
+      behavior: "smooth"
+    });
+  });
+}
+
+// Eventos do lightbox.
+document.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
+
+document.querySelector("[data-lightbox-prev]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(-1);
+});
+
+document.querySelector("[data-lightbox-next]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(1);
+});
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!lightbox.classList.contains("open")) return;
+
   if (event.key === "Escape") closeLightbox();
   if (event.key === "ArrowRight") changeImage(1);
   if (event.key === "ArrowLeft") changeImage(-1);

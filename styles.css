@@ -157,10 +157,6 @@ h3 {
   color: rgba(51, 39, 31, .72);
 }
 
-.site-header.scrolled .brand-logo img {
-  filter: brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(733%) hue-rotate(338deg) brightness(94%) contrast(88%);
-  opacity: .72;
-}
 
 .nav {
   min-height: 74px;
@@ -168,16 +164,6 @@ h3 {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-}
-
-.brand {
-  font-size: 1.12rem;
-  position: relative;
-  z-index: 2;
-}
-
-.brand span {
-  color: var(--moss);
 }
 
 .brand {
@@ -211,6 +197,11 @@ h3 {
   color: currentColor;
   line-height: 1;
   white-space: nowrap;
+}
+
+.site-header.scrolled .brand-logo img {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(19%) saturate(733%) hue-rotate(338deg) brightness(94%) contrast(88%);
+  opacity: .72;
 }
 
 .nav-links {

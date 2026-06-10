@@ -182,33 +182,6 @@ Final conversion section encouraging the guest to book through Airbnb or contact
 
 ---
 
-## 📁 File Structure
-
-chale-gabi-classico/
-│
-├── index.html
-├── styles.css
-├── script.js
-│
-├── assets/
-│   ├── hero-chalet.jpg
-│   ├── cta-mountains.jpg
-│   ├── gallery-exterior.jpg
-│   ├── gallery-view.jpg
-│   ├── gallery-interior.jpg
-│   ├── gallery-nature.jpg
-│   ├── gallery-rest.jpg
-│   ├── gallery-town.jpg
-│   │
-│   └── carousel/
-│       ├── WhatsApp Image 2026-06-10 at 10.50.13.jpeg
-│       ├── WhatsApp Image 2026-06-10 at 10.50.14.jpeg
-│       ├── WhatsApp Image 2026-06-10 at 10.50.14 (1).jpeg
-│       └── ...
-│
-└── java/
-    └── ChaleGabiServer.java
-
 ## 👤 Author
 
 **André Luiz Ghiringhelli**  
@@ -227,3 +200,4 @@ Process Analyst | Full Stack Developer | RPA | Automation
     <img src="https://img.shields.io/badge/-WhatsApp-25d366?style=flat-square&labelColor=25d366&logo=whatsapp&logoColor=white" />
   </a>
 </p>
+

@@ -355,3 +355,75 @@ document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowRight") changeImage(1);
   if (event.key === "ArrowLeft") changeImage(-1);
 });
+
+const languageSelect = document.querySelector("[data-language-select]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
+
+const originalTexts = {};
+
+document.querySelectorAll("[data-i18n]").forEach((element) => {
+  const key = element.dataset.i18n;
+  originalTexts[key] = element.textContent.trim();
+});
+
+function applyLanguage(language) {
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+
+    if (language === "pt-BR") {
+      element.textContent = originalTexts[key];
+      return;
+    }
+
+    const translatedText = TRANSLATIONS?.[language]?.[key];
+
+    if (translatedText) {
+      element.textContent = translatedText;
+    }
+  });
+
+  localStorage.setItem("siteLanguage", language);
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+
+  document.body.classList.toggle("dark-mode", isDark);
+
+  if (themeToggle) {
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Alternar para modo claro" : "Alternar para modo escuro"
+    );
+  }
+
+  localStorage.setItem("siteTheme", theme);
+}
+
+const savedLanguage = localStorage.getItem("siteLanguage") || "pt-BR";
+const savedTheme = localStorage.getItem("siteTheme") || "light";
+
+if (languageSelect) {
+  languageSelect.value = savedLanguage;
+
+  languageSelect.addEventListener("change", () => {
+    applyLanguage(languageSelect.value);
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light";
+
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+    applyTheme(nextTheme);
+  });
+}
+
+applyLanguage(savedLanguage);
+applyTheme(savedTheme);

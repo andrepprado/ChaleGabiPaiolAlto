@@ -5,8 +5,8 @@ const SITE = {
   whatsappUrl: "https://wa.me/5512997108123?text=Olá! Tenho interesse em me hospedar no Chalé Gabi. Poderia me passar mais informações?",
 
   coordinates: {
-    lat: -22.66530961966471,
-    lng: -45.66862383295059
+    lat: -22.665023957239605,
+    lng: -45.66894386360352
   },
   property: {
     guests: "Até 4 hóspedes",

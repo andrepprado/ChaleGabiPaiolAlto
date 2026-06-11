@@ -1,4 +1,3 @@
-````md
 # Chalé Gabi – Landing Page
 
 A complete landing page developed for **Chalé Gabi - Paiol Grande**, a cozy chalet located in São Bento do Sapucaí, SP, focused on hospitality, nature, comfort, local tourism and direct reservation flow.

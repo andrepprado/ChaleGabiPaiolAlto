@@ -33,14 +33,16 @@ const TRANSLATIONS = {
         "buttons.whatsapp": "Chat on WhatsApp ↗",
         "buttons.seePhotos": "See photos",
 
-        "hero.airbnbButton": "Book on Airbnb ↗",
-        "hero.whatsappButton": "Chat on WhatsApp ↗",
-        "hero.photosButton": "See photos",
-
         "chalet.eyebrow": "The Chalet",
         "chalet.title": "Comfort, nature, and peace in one place",
         "chalet.text1": "Located in the Paiol Grande area of São Bento do Sapucaí, Chalé Gabi is ideal for those looking for rest, nature, and a cozy stay in the Mantiqueira Mountains.",
         "chalet.text2": "The chalet accommodates up to 4 guests, with a double bedroom upstairs and an integrated living room and kitchen with a sofa bed.",
+
+        "chalet.nameEyebrow": "A special tribute",
+        "chalet.nameTitle": "Why Chalé Gabi?",
+        "chalet.nameText1": "The name of this chalet is a tribute to Gabi, a very special person to our family.",
+        "chalet.nameText2": "More than a name, it represents love, affection, unity, and the memory of someone who deeply touched our lives. José Maria, the property owner, always considered her a granddaughter in his heart, and naming this place after her was a way to keep her memory alive and celebrate everything she meant to our family.",
+        "chalet.nameText3": "Every detail of Chalé Gabi was designed to convey warmth, peace, and care. We hope that everyone who stays here can feel a little of the inspiration that gave rise to this very special place.",
 
         "property.guestsLabel": "Guests",
         "property.bedroomLabel": "Bedroom",

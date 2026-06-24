@@ -906,6 +906,14 @@ h1 em {
   right: -1.1rem;
 }
 
+.arrival-photos-block {
+  margin-top: 5rem;
+}
+
+.arrival-photos-heading {
+  margin-bottom: 2rem;
+}
+
 .experience-grid {
   margin-top: 3rem;
   display: grid;
@@ -1691,4 +1699,39 @@ body.dark-mode .site-header.scrolled .site-controls select option:hover,
 body.dark-mode .site-header.scrolled .site-controls select option:focus {
   background-color: #365b42;
   color: #ffffff;
+}
+
+.name-story-card {
+  margin-bottom: 4rem;
+  max-width: 860px;
+  padding: 2rem;
+  background: rgba(240, 234, 223, .65);
+  border: 1px solid rgba(229, 222, 210, .75);
+  border-radius: 1.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.name-story-card h3 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.name-story-card p {
+  color: rgba(51, 39, 31, .76);
+  font-size: 1.02rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.name-story-card p:last-child {
+  margin-bottom: 0;
+}
+
+body.dark-mode .name-story-card {
+  background: rgba(255, 255, 255, .06);
+  border-color: var(--border);
+}
+
+body.dark-mode .name-story-card p {
+  color: rgba(249, 248, 242, .78);
 }

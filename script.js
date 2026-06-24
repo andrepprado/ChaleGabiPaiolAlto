@@ -1,673 +1,469 @@
-<!DOCTYPE html>
+// Configurações principais do site — edite aqui quando tiver as informações finais.
+const SITE = {
+  airbnbUrl: "https://www.airbnb.com.br/rooms/1697423673867581459?unique_share_id=639cff9a-bcb5-45d3-bdaa-59b544188f0b&viralityEntryPoint=1&s=76",
 
-<html lang="pt-BR">
+  whatsappUrl: "https://wa.me/5512997108123?text=Olá! Tenho interesse em me hospedar no Chalé Gabi. Poderia me passar mais informações?",
 
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>Chalé Gabi - Paiol Grande | Hospedagem em São Bento do Sapucaí</title>
-  <meta
-    content="Conheça o Chalé Gabi - Paiol Grande, um refúgio aconchegante em São Bento do Sapucaí - SP, ideal para dias de descanso cercados pela natureza. Reserve pelo Airbnb."
-    name="description" />
-  <meta
-    content="Chalé Gabi, Paiol Grande, São Bento do Sapucaí, chalé para aluguel, Airbnb São Bento do Sapucaí, hospedagem na natureza, chalé na serra, aluguel por temporada"
-    name="keywords" />
-  <meta content="Chalé Gabi - Paiol Grande | Hospedagem em São Bento do Sapucaí" property="og:title" />
-  <meta content="Um refúgio aconchegante em meio à natureza de São Bento do Sapucaí. Reserve pelo Airbnb."
-    property="og:description" />
-  <meta content="website" property="og:type" />
-  <meta content="assets/hero-chalet.jpg" property="og:image" />
-  <meta content="summary_large_image" name="twitter:card" />
-  <meta content="assets/hero-chalet.jpg" name="twitter:image" />
-  <link href="https://www.airbnb.com.br" rel="preconnect" />
-  <link href="https://wa.me" rel="preconnect" />
-  <link href="https://api.whatsapp.com" rel="preconnect" />
-  <link href="https://www.google.com" rel="preconnect" />
-  <link as="image" fetchpriority="high" href="assets/hero-chalet.jpg" rel="preload" />
-  <link href="styles.css" rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&amp;family=Inter:wght@400;500;600&amp;display=swap"
-    rel="stylesheet" />
-</head>
+  coordinates: {
+    lat: -22.665023957239605,
+    lng: -45.66894386360352
+  },
+  property: {
+    guests: "Até 4 hóspedes",
+    bedrooms: "1 quarto de casal",
+    beds: "1 cama de casal e 1 sofá-cama",
+    bathrooms: "1 banheiro",
+    price: "Diárias a partir de R$ 560"
+  }
+};
 
-<body>
-  <header class="site-header" data-header="">
-    <nav aria-label="Menu principal" class="container nav">
-      <a aria-label="Voltar ao início" class="brand" data-i18n-aria-label="aria.backHome" href="#inicio">
-        <span aria-hidden="true" class="brand-logo">
-          <img alt="" loading="eager" src="./assets/vetorBranco.png" />
-        </span>
-        <span class="brand-text">Chalé Gabi</span>
-      </a>
-      <button aria-expanded="false" aria-label="Abrir menu" class="menu-button" data-i18n-aria-label="aria.openMenu"
-        data-menu-button="">☰</button>
-      <div class="nav-links" data-menu="">
-        <a data-i18n="nav.home" href="#inicio">Início</a>
-        <a data-i18n="nav.chalet" href="#chale">O Chalé</a>
-        <a data-i18n="nav.photos" href="#fotos">Fotos</a>
-        <a data-i18n="nav.location" href="#localizacao">Localização</a>
-        <a data-i18n="nav.booking" href="#reserva">Reservas</a>
-        <a class="button button-dark nav-cta" data-airbnb-link="" data-i18n="nav.reserve" rel="noopener noreferrer"
-          target="_blank">Reservar</a>
-        <div class="site-controls"><select aria-label="Selecionar idioma" data-i18n-aria-label="controls.languageLabel"
-            data-language-select="">
-            <option value="pt-BR">PT</option>
-            <option value="en">EN</option>
-          </select><button aria-label="Alternar modo claro ou escuro" class="theme-toggle"
-            data-i18n-aria-label="controls.themeToggle" data-theme-toggle="" type="button"></button></div>
-      </div>
-    </nav>
-  </header>
-  <main>
-    <section class="hero" id="inicio">
-      <img alt="Chalé Gabi ao entardecer entre as montanhas de São Bento do Sapucaí" class="hero-image"
-        data-i18n-alt="alt.heroChalet" fetchpriority="high" src="assets/hero-chalet.jpg" />
-      <div class="hero-overlay"></div>
-      <div class="container hero-content fade-up">
-        <span class="badge" data-i18n="hero.badge">📍 São Bento do Sapucaí - SP</span>
-        <h1>Chalé Gabi <em data-i18n="hero.titleHighlight">Paiol Grande</em></h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Um refúgio aconchegante em meio à natureza de São Bento do
-          Sapucaí.</p>
-        <p class="hero-text" data-i18n="hero.text">Viva dias tranquilos cercado pela natureza, com ar puro, conforto e o
-          charme da serra.</p>
-        <div class="button-row">
-          <a class="button button-light" data-airbnb-link="" data-i18n="buttons.airbnbReserve" rel="noopener noreferrer"
-            target="_blank">
-            Reservar pelo Airbnb ↗
-          </a>
-          <a class="button button-whatsapp" data-i18n="buttons.whatsapp" data-whatsapp-link="" rel="noopener noreferrer"
-            target="_blank">
-            Falar pelo WhatsApp ↗
-          </a>
-          <a class="button button-outline" data-i18n="buttons.seePhotos" href="#fotos">
-            Ver fotos
-          </a>
-        </div>
-      </div>
-    </section>
+const galleryItems = [
+  { src: "assets/gallery-exterior.jpg", alt: "Varanda externa do chalé entre árvores", caption: "Área externa" },
+  { src: "assets/gallery-view.jpg", alt: "Vista das montanhas a partir do chalé", caption: "Vista do chalé" },
+  { src: "assets/gallery-interior.jpg", alt: "Sala interna aconchegante com madeira", caption: "Ambiente interno" },
+  { src: "assets/gallery-nature.jpg", alt: "Mata atlântica ao redor do chalé", caption: "Natureza ao redor" },
+  { src: "assets/gallery-rest.jpg", alt: "Rede no deque com vista para a serra", caption: "Espaço superior" },
+  { src: "assets/gallery-town.jpg", alt: "Rua charmosa de São Bento do Sapucaí", caption: "Experiência no interior" }
+];
 
 
-    <section class="section" id="chale">
-      <div class="container">
-        <div class="name-story-card">
-          <span class="eyebrow" data-i18n="chalet.nameEyebrow">Nossa história</span>
-          <h3 data-i18n="chalet.nameTitle">Por que Chalé Gabi?</h3>
-          <p data-i18n="chalet.nameText1">
-            O nome deste chalé é uma homenagem a Gabi, uma pessoa muito especial para nossa família.
-          </p>
-          <p data-i18n="chalet.nameText2">
-            Mais do que um nome, ele representa amor, afeto, união e a lembrança de alguém que marcou
-            profundamente nossas vidas. José Maria, proprietário da propriedade, sempre a considerou uma
-            neta de coração, e dar seu nome a este lugar foi uma forma de manter viva sua memória e
-            celebrar tudo o que ela significou para nossa família.
-          </p>
-          <p data-i18n="chalet.nameText3">
-            Cada detalhe do Chalé Gabi foi pensado para transmitir acolhimento, tranquilidade e carinho.
-            Esperamos que todos que passem por aqui possam sentir um pouco da inspiração que deu origem
-            a este lugar tão especial.
-          </p>
-        </div>
-      </div>
-
-      <div class="container two-columns intro-grid">
-        <div>
-          <span class="eyebrow" data-i18n="chalet.eyebrow">O Chalé</span>
-          <h2 data-i18n="chalet.title">Conforto, natureza e tranquilidade em um só lugar</h2>
-        </div>
-        <div>
-          <p class="lead" data-i18n="chalet.text1">
-            Localizado na região do Paiol Grande, em São Bento do Sapucaí, o Chalé Gabi é ideal para
-            quem busca descanso, natureza e uma estadia aconchegante na Serra da Mantiqueira.
-          </p>
-          <p class="lead" data-i18n="chalet.text2">
-            O chalé acomoda até 4 hóspedes, com um quarto de casal na parte superior e sala integrada
-            à cozinha com sofá-cama.
-          </p>
-          <dl class="summary-cards">
-            <div>
-              <dt data-i18n="property.guestsLabel">Hóspedes</dt>
-              <dd data-i18n="property.guests" data-property="guests">Até 4 hóspedes</dd>
-            </div>
-            <div>
-              <dt data-i18n="property.bedroomLabel">Quarto</dt>
-              <dd data-i18n="property.bedrooms" data-property="bedrooms">1 quarto de casal</dd>
-            </div>
-            <div>
-              <dt data-i18n="property.bedsLabel">Camas</dt>
-              <dd data-i18n="property.beds" data-property="beds">1 cama de casal e 1 sofá-cama</dd>
-            </div>
-            <div>
-              <dt data-i18n="property.bathroomLabel">Banheiro</dt>
-              <dd data-i18n="property.bathroomsFull" data-property="bathrooms">1 banheiro amplo</dd>
-            </div>
-          </dl>
-          <p class="muted" data-i18n="property.price" data-property="price">Diárias a partir de R$ 560</p>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section section-tight">
-      <div class="container card-grid highlights">
-        <article class="card">
-          <span class="card-icon">
-            <img alt="" src="https://api.iconify.design/lucide:trees.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.natureTitle">Cercado pela natureza</h3>
-          <p data-i18n="highlights.natureText">Mata, montanhas e ar puro da Serra da Mantiqueira.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">
-            <img alt="" src="https://api.iconify.design/lucide:house.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.cozyTitle">Ambiente aconchegante</h3>
-          <p data-i18n="highlights.cozyText">Um espaço pensado para descansar e se sentir em casa.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">
-            <img alt=""
-              src="https://api.iconify.design/lucide:map-pin.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.locationTitle">Localização tranquila</h3>
-          <p data-i18n="highlights.locationText">Na região do Paiol Grande, com clima reservado e silencioso.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">
-            <img alt="" src="https://api.iconify.design/lucide:heart.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.restTitle">Ideal para descanso</h3>
-          <p data-i18n="highlights.restText">Perfeito para casais, famílias pequenas e dias de pausa.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">
-            <img alt=""
-              src="https://api.iconify.design/lucide:compass.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.toursTitle">Passeios próximos</h3>
-          <p data-i18n="highlights.toursText">Trilhas, mirantes, restaurantes e experiências ao ar livre.</p>
-        </article>
-        <article class="card">
-          <span class="card-icon">
-            <img alt=""
-              src="https://api.iconify.design/lucide:calendar-check.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-          </span>
-          <h3 data-i18n="highlights.bookingTitle">Reserva fácil</h3>
-          <p data-i18n="highlights.bookingText">Consulte disponibilidade e valores diretamente pelo Airbnb.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="fotos">
-      <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <span class="eyebrow" data-i18n="gallery.eyebrow">Galeria</span>
-            <h2 data-i18n="gallery.title">Conheça o chalé</h2>
-          </div>
-          <p data-i18n="gallery.description">Passeie pelos ambientes do chalé e sinta a atmosfera que aguarda por você
-            em São Bento do Sapucaí.</p>
-        </div>
-        <div class="gallery" data-gallery="">
-          <button class="gallery-item featured" data-index="0"><img alt="Varanda externa do chalé entre árvores"
-              data-i18n-alt="alt.galleryExterior" loading="lazy" src="assets/gallery-exterior.jpg" /><span
-              data-i18n="gallery.externalArea">Área externa</span></button>
-          <button class="gallery-item" data-index="1"><img alt="Vista das montanhas a partir do chalé"
-              data-i18n-alt="alt.galleryView" loading="lazy" src="assets/gallery-view.jpg" /><span
-              data-i18n="gallery.chaletView">Vista do chalé</span></button>
-          <button class="gallery-item" data-index="2"><img alt="Sala interna aconchegante com madeira"
-              data-i18n-alt="alt.galleryInterior" loading="lazy" src="assets/gallery-interior.jpg" /><span
-              data-i18n="gallery.interior">Ambiente interno</span></button>
-          <button class="gallery-item" data-index="3"><img alt="Mata atlântica ao redor do chalé"
-              data-i18n-alt="alt.galleryNature" loading="lazy"
-              src="assets/carousel/WhatsApp Image 2026-06-10 at 10.50.16.jpeg" /><span
-              data-i18n="gallery.natureAround">Natureza ao redor</span></button>
-          <button class="gallery-item" data-index="4"><img alt="Rede no deque com vista para a serra"
-              data-i18n-alt="alt.galleryRest" loading="lazy" src="assets/gallery-rest.jpg" /><span
-              data-i18n="gallery.restSpace">Espaço para descanso</span></button>
-          <button class="gallery-item" data-index="5"><img alt="Rua charmosa de São Bento do Sapucaí"
-              data-i18n-alt="alt.galleryTown" loading="lazy" src="assets/gallery-town.jpg" /><span
-              data-i18n="gallery.countryExperience">Experiência no interior</span></button>
-        </div>
-        <div class="all-photos-block">
-          <div class="section-heading split-heading all-photos-heading">
-            <div>
-              <span class="eyebrow" data-i18n="photos.eyebrow">Todas as fotos</span>
-              <h2 data-i18n="photos.title">Veja mais detalhes do chalé</h2>
-            </div>
-            <p data-i18n="photos.description">
-              Confira outros ambientes e detalhes do Chalé Gabi.
-            </p>
-          </div>
-          <div class="photo-carousel-wrap">
-            <button aria-label="Fotos anteriores" class="carousel-arrow carousel-arrow-left" data-carousel-prev=""
-              data-i18n-aria-label="aria.previousPhotos" type="button">
-              ‹
-            </button>
-            <div class="photo-carousel" data-photo-carousel=""></div>
-            <button aria-label="Próximas fotos" class="carousel-arrow carousel-arrow-right" data-carousel-next=""
-              data-i18n-aria-label="aria.nextPhotos" type="button">
-              ›
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
+const allPhotoItems = [
+  "WhatsApp Image 2026-06-10 at 10.50.13.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.14.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.14 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.15.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.16 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.17 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.18.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.18 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.19.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.19 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.20 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.21.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.22 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.23 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.24 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.25 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.26.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.27 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.28.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.28 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.29 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.29 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.30 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.31 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.32.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.32 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.33 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34 (1).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.34 (2).jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.35.jpeg",
+  "WhatsApp Image 2026-06-10 at 10.50.35 (1).jpeg"
+].map((fileName, index) => ({
+  src: `assets/carousel/${fileName}`,
+  alt: `Foto ${index + 1} do Chalé Gabi`,
+  caption: `Foto ${index + 1}`
+}));
 
 
-    <section class="section">
-      <div class="container">
-        <div class="narrow">
-          <span class="eyebrow" data-i18n="experience.eyebrow">Experiência</span>
-          <h2 data-i18n="experience.title">Um lugar para desacelerar</h2>
-          <p class="lead" data-i18n="experience.text">
-            Imagine acordar com o som da natureza, respirar o ar puro da serra e aproveitar dias
-            tranquilos em um chalé pensado para acolher. O Chalé Gabi oferece uma atmosfera simples,
-            charmosa e confortável para quem quer fugir da rotina e viver momentos especiais no interior.
-          </p>
-        </div>
-        <div class="experience-grid">
-          <div class="mini-card">
-            <span class="mini-card-icon">
-              <img alt="" src="https://api.iconify.design/lucide:sun.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <p data-i18n="experience.relax">Relaxar e recarregar as energias</p>
-          </div>
-          <div class="mini-card">
-            <span class="mini-card-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:trees.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <p data-i18n="experience.connectNature">Conectar-se com a natureza</p>
-          </div>
-          <div class="mini-card">
-            <span class="mini-card-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <p data-i18n="experience.enjoyCity">Aproveitar São Bento do Sapucaí</p>
-          </div>
-          <div class="mini-card">
-            <span class="mini-card-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:calendar-check.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <p data-i18n="experience.easyBooking">Reservar com praticidade pelo Airbnb</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section section-alt">
-      <div class="container">
-        <span class="eyebrow" data-i18n="amenities.eyebrow">Comodidades</span>
-        <h2 data-i18n="amenities.title">Comodidades</h2>
-        <ul class="amenities">
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:chef-hat.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.cooktop">Cozinha com cooktop</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:refrigerator.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.minibar">Frigobar</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt="" src="https://api.iconify.design/lucide:tv.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.tv">TV de 32”</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:snowflake.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.airConditioning">Ar-condicionado</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:heater.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.oilHeater">Aquecedor a óleo</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:droplets.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.gasShower">Banheiro com aquecimento a gás</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt="" src="https://api.iconify.design/lucide:sofa.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.sofaBed">Sofá-cama</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.natureView">Vista para a natureza</span>
-          </li>
-          <li>
-            <span class="amenity-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:paw-print.svg?color=%236f7f5f&amp;width=22&amp;height=22" />
-            </span>
-            <span class="amenity-text" data-i18n="amenities.pets">Aceita pets de pequeno porte, máximo 2</span>
-          </li>
-        </ul>
-      </div>
-    </section>
+const arrivalPhotoItems = [
+  "estrada.jpeg",
+  "caminho_entrada.jpeg",
+  "caminho_rampa.jpeg",
+  "caminho_curva.jpeg",
+  "porteira.jpeg"
+
+].map((fileName, index) => ({
+  src: `assets/guia/${fileName}`,
+  alt: `Foto ${index + 1} do caminho até o Chalé Gabi`,
+  caption: `Passo ${index + 1}`
+}));
+
+const arrivalPhotoCarousel = document.querySelector("[data-arrival-photo-carousel]");
+const arrivalCarouselPrev = document.querySelector("[data-arrival-carousel-prev]");
+const arrivalCarouselNext = document.querySelector("[data-arrival-carousel-next]");
+
+if (arrivalPhotoCarousel) {
+  arrivalPhotoItems.forEach((item, index) => {
+    const button = document.createElement("button");
+
+    button.className = "photo-carousel-item";
+    button.type = "button";
+    button.setAttribute("aria-label", `Abrir foto do caminho ${index + 1}`);
+
+    button.innerHTML = `
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+    `;
+
+    button.addEventListener("click", () => {
+      openLightboxFromList(arrivalPhotoItems, index);
+    });
+
+    arrivalPhotoCarousel.appendChild(button);
+  });
+}
+
+if (arrivalCarouselPrev && arrivalPhotoCarousel) {
+  arrivalCarouselPrev.addEventListener("click", () => {
+    arrivalPhotoCarousel.scrollBy({
+      left: -420,
+      behavior: "smooth"
+    });
+  });
+}
+
+if (arrivalCarouselNext && arrivalPhotoCarousel) {
+  arrivalCarouselNext.addEventListener("click", () => {
+    arrivalPhotoCarousel.scrollBy({
+      left: 420,
+      behavior: "smooth"
+    });
+  });
+}
 
 
-    <section class="section" id="localizacao">
-      <div class="container two-columns location-grid">
-        <div>
-          <span class="eyebrow" data-i18n="location.eyebrow">Onde fica</span>
-          <h2 data-i18n="location.title">Localização</h2>
-          <p class="lead" data-i18n="location.description">
-            O Chalé Gabi está localizado na região do Paiol Grande, em São Bento do Sapucaí - SP,
-            uma área tranquila, cercada pela natureza e próxima aos principais passeios da região.
-          </p>
-          <dl class="details-list">
-            <div>
-              <dt data-i18n="location.addressLabel">Endereço</dt>
-              <dd data-address="">
-                Rod. Pref. Benedicto Gomes de Souza, km 7.4<br />
-                São Bento do Sapucaí - SP, 12490-000
-              </dd>
-            </div>
-            <div>
-              <dt data-i18n="location.referenceLabel">Referência</dt>
-              <dd data-i18n="location.referenceText">
-                Após o Acampamento Paiol Grande, siga pela Rod. Pref. Benedicto Gomes de Souza até o km 7.4.
-              </dd>
-            </div>
-            <div>
-              <dt data-i18n="location.coordinatesLabel">Coordenadas</dt>
-              <dd class="mono" data-coordinates="">-22.665024, -45.668944</dd> -22.66502466608948, -45.66893597916863
-            </div>
-          </dl>
-          <div class="location-actions">
-            <a class="button button-dark location-button-main" data-i18n="location.googleMaps" data-map-link=""
-              rel="noopener noreferrer" target="_blank">
-              Ver no Google Maps ↗
-            </a>
-            <!--
-            <a class="button location-button-secondary" data-i18n="location.waze" data-waze-link=""
-              rel="noopener noreferrer" target="_blank">
-              Abrir no Waze ↗
-            </a> -->
+const header = document.querySelector("[data-header]");
+const menuButton = document.querySelector("[data-menu-button]");
+const menu = document.querySelector("[data-menu]");
 
-            <button class="button location-button-secondary" data-copy-address="" data-i18n="location.copyAddress"
-              type="button">
-              Copiar endereço
-            </button>
-          </div>
-        </div>
-        <div class="map-frame">
-          <iframe data-i18n-title="location.mapTitle" data-map-embed="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" title="Mapa aproximado do Chalé Gabi">
-          </iframe>
-        </div>
-      </div>
+function setHeaderState() {
+  header.classList.toggle("scrolled", window.scrollY > 16);
+}
+window.addEventListener("scroll", setHeaderState, { passive: true });
+setHeaderState();
 
-      <!--
-      <div class="container">
-        <div class="arrival-photos-block">
-          <div class="section-heading split-heading arrival-photos-heading">
-            <div>
-              <span class="eyebrow" data-i18n="arrival.eyebrow">Como chegar</span>
-              <h2 data-i18n="arrival.title">Passo a passo até o chalé</h2>
-            </div>
-            <p data-i18n="arrival.description">
-              Veja algumas referências visuais do caminho para facilitar sua chegada ao Chalé Gabi.
-            </p>
-          </div>
+menuButton.addEventListener("click", () => {
+  const isOpen = menu.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.textContent = isOpen ? "×" : "☰";
+});
 
-          <div class="photo-carousel-wrap">
-            <button aria-label="Fotos anteriores" class="carousel-arrow carousel-arrow-left"
-              data-arrival-carousel-prev="" data-i18n-aria-label="aria.previousPhotos" type="button">
-              ‹
-            </button>
+menu.querySelectorAll("a[href^='#']").forEach((link) => {
+  link.addEventListener("click", () => {
+    menu.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "☰";
+  });
+});
 
-            <div class="photo-carousel" data-arrival-photo-carousel=""></div>
+// Aplica links do Airbnb, WhatsApp e dados editáveis.
+document.querySelectorAll("[data-airbnb-link]").forEach((link) => {
+  link.href = SITE.airbnbUrl;
+});
 
-            <button aria-label="Próximas fotos" class="carousel-arrow carousel-arrow-right"
-              data-arrival-carousel-next="" data-i18n-aria-label="aria.nextPhotos" type="button">
-              ›
-            </button>
-          </div>
-        </div>
-      </div>
--->
+document.querySelectorAll("[data-whatsapp-link]").forEach((link) => {
+  link.href = SITE.whatsappUrl;
+});
 
+document.querySelectorAll("[data-property]").forEach((el) => {
+  const key = el.dataset.property;
+  if (SITE.property[key]) el.textContent = SITE.property[key];
+});
 
+// Localização: Google Maps, Waze, iframe e copiar endereço.
+const addressText = "Rod. Pref. Benedicto Gomes de Souza, km 7.4, São Bento do Sapucaí - SP, 12490-000";
+const { lat, lng } = SITE.coordinates;
 
-    </section>
+const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+const wazeUrl = `https://waze.com/ul?ll=${lat},${lng}&navigate=yes`;
 
+const mapLink = document.querySelector("[data-map-link]");
+if (mapLink) {
+  mapLink.href = googleMapsUrl;
+}
 
-    <section class="section section-alt" id="explore">
-      <div class="container">
-        <div class="section-heading split-heading">
-          <div>
-            <span class="eyebrow" data-i18n="explore.eyebrow">Destino</span>
-            <h2 data-i18n="explore.title">Explore São Bento do Sapucaí</h2>
-          </div>
-          <p data-i18n="explore.description">
-            Entre montanhas, trilhas, cafés charmosos e boa gastronomia, São Bento do Sapucaí oferece
-            experiências perfeitas para quem quer descansar, passear e aproveitar a Serra da Mantiqueira.
-          </p>
-        </div>
-        <div class="explore-grid">
-          <article class="explore-card">
-            <span class="explore-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:mountain.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <span class="explore-category" data-i18n="explore.toursCategory">Passeios</span>
-            <h3 data-i18n="explore.natureLookouts">Natureza e mirantes</h3>
-            <ul class="explore-links">
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Pedra%20do%20Ba%C3%BA%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Pedra do Baú</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Bauzinho%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Bauzinho</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Pedra%20Ana%20Chata%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Pedra Ana Chata</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Mirante%20Paiol%20Grande%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Mirantes do Paiol Grande</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Capelinha%20de%20Mosaico%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Capelinha de Mosaico</a>
-              </li>
-            </ul>
-          </article>
-          <article class="explore-card">
-            <span class="explore-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:coffee.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <span class="explore-category" data-i18n="explore.cafesCategory">Cafés</span>
-            <h3 data-i18n="explore.cafesBrunch">Cafés e brunch</h3>
-            <ul class="explore-links">
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Doce%20Caf%C3%A9%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Doce Café</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Jardim%20Caf%C3%A9%20e%20Brunch%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Jardim Café &amp; Brunch</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=O%20Bento%20Caf%C3%A9%20e%20Arte%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">O Bento Café e Arte</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Sabor%20da%20Serra%20Caf%C3%A9%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Sabor da Serra Café</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Dona%20Mariquinha%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Dona Mariquinha</a>
-              </li>
-            </ul>
-          </article>
-          <article class="explore-card">
-            <span class="explore-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:utensils.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <span class="explore-category" data-i18n="explore.foodCategory">Gastronomia</span>
-            <h3 data-i18n="explore.whereToEat">Onde comer</h3>
-            <ul class="explore-links">
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Pedra%20do%20Ba%C3%BA%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Restaurante Pedra do Baú</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Sabor%20com%20Arte%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Restaurante Sabor com Arte</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=L%C3%A1%20na%20Ro%C3%A7a%20Restaurante%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Lá na Roça Restaurante</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Do%20Compadre%20Restaurante%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Do Compadre Restaurante</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante%20Entre%20Vilas%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Restaurante Entre Vilas</a>
-              </li>
-            </ul>
-          </article>
-          <article class="explore-card">
-            <span class="explore-icon">
-              <img alt=""
-                src="https://api.iconify.design/lucide:glass-water.svg?color=%236f7f5f&amp;width=24&amp;height=24" />
-            </span>
-            <span class="explore-category" data-i18n="explore.lateAfternoonCategory">Fim de tarde</span>
-            <h3 data-i18n="explore.noRush">Para curtir sem pressa</h3>
-            <ul class="explore-links">
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Bauzera%20Cervejas%20Especiais%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Bauzera Cervejas Especiais</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=D%C3%B9%20Ba%C3%BA%20Cervejaria%20Artesanal%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Dù Baú Cervejaria Artesanal</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Tiao%20Bar%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Tião Bar</a>
-              </li>
-              <li>
-                <a class="explore-link"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=Centro%20de%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Centro de São Bento do Sapucaí</a>
-              </li>
-              <li>
-                <a class="explore-link" data-i18n="explore.localShops"
-                  href="https://www.google.com/maps/search/?api=1&amp;query=lojinhas%20S%C3%A3o%20Bento%20do%20Sapuca%C3%AD"
-                  rel="noopener noreferrer" target="_blank">Comércios locais e lojinhas</a>
-              </li>
-            </ul>
-          </article>
-        </div>
-        <p class="muted italic explore-note" data-i18n="explore.note">
-          Dica: horários de funcionamento, valores e necessidade de reserva podem variar. Consulte antes de sair.
-        </p>
-      </div>
-    </section>
-    <section class="cta-section" id="reserva">
-      <img alt="Montanhas e neblina ao amanhecer em São Bento do Sapucaí" data-i18n-alt="alt.ctaMountains"
-        loading="lazy" src="assets/cta-mountains.jpg" />
-      <div class="cta-overlay"></div>
-      <div class="container cta-content">
-        <h2 data-i18n="cta.title">Pronto para viver dias especiais no Chalé Gabi?</h2>
-        <p data-i18n="cta.text">Confira disponibilidade, valores e detalhes completos diretamente pelo Airbnb.</p>
-        <a class="button button-light" data-airbnb-link="" data-i18n="buttons.airbnbReserve" rel="noopener noreferrer"
-          target="_blank">Reservar pelo Airbnb
-          ↗</a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="footer-brand">
-          <span aria-hidden="true" class="footer-logo">
-            <img alt="" loading="lazy" src="./assets/vetorBranco.png" />
-          </span>
-          <div>
-            <p class="footer-title">Chalé Gabi - Paiol Grande</p>
-            <p>
-              Rod. Pref. Benedicto Gomes de Souza, km 7.4<br />
-              São Bento do Sapucaí - SP, 12490-000
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="footer-buttons">
-        <a class="button button-footer" data-airbnb-link="" rel="noopener noreferrer" target="_blank">
-          Airbnb ↗
-        </a>
-        <a class="button button-footer" data-whatsapp-link="" rel="noopener noreferrer" target="_blank">
-          WhatsApp ↗
-        </a>
-      </div>
-    </div>
-    <div class="copyright" data-i18n="footer.copyright">© 2026 Chalé Gabi - Paiol Grande. Todos os direitos reservados.
-    </div>
-  </footer>
-  <div aria-hidden="true" aria-modal="true" class="lightbox" data-lightbox="" role="dialog">
-    <button aria-label="Fechar" class="lightbox-close" data-i18n-aria-label="aria.close"
-      data-lightbox-close="">×</button>
-    <button aria-label="Imagem anterior" class="lightbox-prev" data-i18n-aria-label="aria.previousImage"
-      data-lightbox-prev="">‹</button>
-    <figure>
-      <img alt="" data-lightbox-image="" />
-      <figcaption data-lightbox-caption=""></figcaption>
-    </figure>
-    <button aria-label="Próxima imagem" class="lightbox-next" data-i18n-aria-label="aria.nextImage"
-      data-lightbox-next="">›</button>
-  </div>
-  <script src="translations.js"></script>
-  <script src="script.js"></script>
-</body>
+const wazeLink = document.querySelector("[data-waze-link]");
+if (wazeLink) {
+  wazeLink.href = wazeUrl;
+}
 
-</html>
+const coordinatesText = document.querySelector("[data-coordinates]");
+if (coordinatesText) {
+  coordinatesText.textContent = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+}
+
+const mapEmbed = document.querySelector("[data-map-embed]");
+if (mapEmbed) {
+  mapEmbed.src = `https://www.google.com/maps?q=${lat},${lng}&z=15&output=embed`;
+}
+
+const copyAddressButton = document.querySelector("[data-copy-address]");
+if (copyAddressButton) {
+  copyAddressButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(addressText);
+
+      copyAddressButton.textContent = "Endereço copiado!";
+
+      setTimeout(() => {
+        copyAddressButton.textContent = "Copiar endereço";
+      }, 2000);
+    } catch (error) {
+      copyAddressButton.textContent = "Não foi possível copiar";
+
+      setTimeout(() => {
+        copyAddressButton.textContent = "Copiar endereço";
+      }, 2000);
+    }
+  });
+}
+/*
+// Lightbox da galeria.
+let activeIndex = 0;
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+
+function openLightbox(index) {
+  activeIndex = index;
+  const item = galleryItems[activeIndex];
+  lightboxImage.src = item.src;
+  lightboxImage.alt = item.alt;
+  lightboxCaption.textContent = item.caption;
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function changeImage(direction) {
+  activeIndex = (activeIndex + direction + galleryItems.length) % galleryItems.length;
+  openLightbox(activeIndex);
+}
+
+document.querySelectorAll("[data-gallery] [data-index]").forEach((button) => {
+  button.addEventListener("click", () => openLightbox(Number(button.dataset.index)));
+});
+
+document.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
+document.querySelector("[data-lightbox-prev]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(-1);
+});
+document.querySelector("[data-lightbox-next]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(1);
+});
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!lightbox.classList.contains("open")) return;
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowRight") changeImage(1);
+  if (event.key === "ArrowLeft") changeImage(-1);
+});
+*/
+
+// Lightbox da galeria e do carrossel.
+let activeIndex = 0;
+let activeGallery = galleryItems;
+
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = document.querySelector("[data-lightbox-image]");
+const lightboxCaption = document.querySelector("[data-lightbox-caption]");
+
+function openLightboxFromList(items, index) {
+  activeGallery = items;
+  activeIndex = index;
+
+  const item = activeGallery[activeIndex];
+
+  lightboxImage.src = item.src;
+  lightboxImage.alt = item.alt;
+  lightboxCaption.textContent = item.caption || "";
+
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function openLightbox(index) {
+  openLightboxFromList(galleryItems, index);
+}
+
+function closeLightbox() {
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function changeImage(direction) {
+  activeIndex = (activeIndex + direction + activeGallery.length) % activeGallery.length;
+  openLightboxFromList(activeGallery, activeIndex);
+}
+
+// Galeria principal.
+document.querySelectorAll("[data-gallery] [data-index]").forEach((button) => {
+  button.addEventListener("click", () => openLightbox(Number(button.dataset.index)));
+});
+
+// Carrossel com todas as fotos.
+const photoCarousel = document.querySelector("[data-photo-carousel]");
+const carouselPrev = document.querySelector("[data-carousel-prev]");
+const carouselNext = document.querySelector("[data-carousel-next]");
+
+if (photoCarousel) {
+  allPhotoItems.forEach((item, index) => {
+    const button = document.createElement("button");
+
+    button.className = "photo-carousel-item";
+    button.type = "button";
+    button.setAttribute("aria-label", `Abrir foto ${index + 1}`);
+
+    button.innerHTML = `
+      <img src="${item.src}" alt="${item.alt}" loading="lazy">
+    `;
+
+    button.addEventListener("click", () => {
+      openLightboxFromList(allPhotoItems, index);
+    });
+
+    photoCarousel.appendChild(button);
+  });
+}
+
+if (carouselPrev && photoCarousel) {
+  carouselPrev.addEventListener("click", () => {
+    photoCarousel.scrollBy({
+      left: -420,
+      behavior: "smooth"
+    });
+  });
+}
+
+if (carouselNext && photoCarousel) {
+  carouselNext.addEventListener("click", () => {
+    photoCarousel.scrollBy({
+      left: 420,
+      behavior: "smooth"
+    });
+  });
+}
+
+// Eventos do lightbox.
+document.querySelector("[data-lightbox-close]").addEventListener("click", closeLightbox);
+
+document.querySelector("[data-lightbox-prev]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(-1);
+});
+
+document.querySelector("[data-lightbox-next]").addEventListener("click", (event) => {
+  event.stopPropagation();
+  changeImage(1);
+});
+
+lightbox.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+
+document.addEventListener("keydown", (event) => {
+  if (!lightbox.classList.contains("open")) return;
+
+  if (event.key === "Escape") closeLightbox();
+  if (event.key === "ArrowRight") changeImage(1);
+  if (event.key === "ArrowLeft") changeImage(-1);
+});
+
+const languageSelect = document.querySelector("[data-language-select]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
+
+const originalTexts = {};
+
+document.querySelectorAll("[data-i18n]").forEach((element) => {
+  const key = element.dataset.i18n;
+  originalTexts[key] = element.textContent.trim();
+});
+
+function applyLanguage(language) {
+  document.documentElement.lang = language;
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+
+    if (language === "pt-BR") {
+      element.textContent = originalTexts[key];
+      return;
+    }
+
+    const translatedText = TRANSLATIONS?.[language]?.[key];
+
+    if (translatedText) {
+      element.textContent = translatedText;
+    }
+  });
+
+  localStorage.setItem("siteLanguage", language);
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+
+  document.body.classList.toggle("dark-mode", isDark);
+
+  if (themeToggle) {
+    themeToggle.setAttribute(
+      "aria-label",
+      isDark ? "Alternar para modo claro" : "Alternar para modo escuro"
+    );
+  }
+
+  localStorage.setItem("siteTheme", theme);
+}
+
+const savedLanguage = localStorage.getItem("siteLanguage") || "pt-BR";
+const savedTheme = localStorage.getItem("siteTheme") || "light";
+
+if (languageSelect) {
+  languageSelect.value = savedLanguage;
+
+  languageSelect.addEventListener("change", () => {
+    applyLanguage(languageSelect.value);
+  });
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = document.body.classList.contains("dark-mode")
+      ? "dark"
+      : "light";
+
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+
+    applyTheme(nextTheme);
+  });
+}
+
+applyLanguage(savedLanguage);
+applyTheme(savedTheme);
